@@ -1,9 +1,6 @@
-console.log("link test");
-
 const gridContainer = document.getElementById("gridContainer");
-
 //gridBox.style.backgroundColor = "black";
-//gridBox.style.width = "200px";
+
 alert("Enter number of blocks per side");
 const userInput = prompt()
 const numOfBlocks = userInput
@@ -18,9 +15,5 @@ function addBoxes(row) {
     }
 }
 
-//gridBox.style.width = newWidth + "px";
-
-
 addBoxes(numOfBlocks);
-console.log(newWidth);
-console.log(gridContainer.clientWidth);
+console.log("Each box is " + newWidth + "px x " + newWidth + "px");
