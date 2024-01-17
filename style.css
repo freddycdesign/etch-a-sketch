@@ -10,7 +10,7 @@ h1 {
 }
 
 body {
-
+    text-align:center;
 }
 
 #gridContainer {
@@ -32,4 +32,8 @@ body {
     border: 1px solid black;
     width:100px;
 
+}
+
+#resetGrid {
+   margin: 10px auto 20px auto;
 }

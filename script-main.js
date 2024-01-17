@@ -17,3 +17,8 @@ function addBoxes(row) {
 
 addBoxes(numOfBlocks);
 console.log("Each box is " + newWidth + "px x " + newWidth + "px");
+
+const resetGrid = document.getElementById("resetGrid");
+resetGrid.addEventListener('click', () => {
+    window.location.reload();
+})
