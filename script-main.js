@@ -11,6 +11,14 @@ function addBoxes(numOfBlocks) {
         gridBox.style.width = newWidth + "px";
     }
     console.log("Each box is " + newWidth + "px x " + newWidth + "px");
+
+    const divBox = document.querySelectorAll(".gridBox")
+    
+    divBox.forEach((divBox) => {
+        divBox.addEventListener('mouseover', () => {
+            divBox.style.backgroundColor = "black";
+        })
+    });
 }
 
 function promptForBlocks() {
@@ -28,3 +36,4 @@ resetGrid.addEventListener('click', () => {
 
 const numOfBlocks = promptForBlocks();
 addBoxes(numOfBlocks);
+
