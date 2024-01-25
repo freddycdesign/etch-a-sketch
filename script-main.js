@@ -13,12 +13,28 @@ function addBoxes(numOfBlocks) {
     console.log("Each box is " + newWidth + "px x " + newWidth + "px");
 
     const divBox = document.querySelectorAll(".gridBox")
-    
-    divBox.forEach((divBox) => {
-        divBox.addEventListener('mouseover', () => {
-            divBox.style.backgroundColor = "black";
-        })
-    });
+    const blackCheckbox = document.getElementById("black");
+    const colorCheckbox = document.getElementById("randomColor")
+    blackCheckbox.addEventListener("change", () => {
+        if (blackCheckbox.checked) {
+            divBox.forEach((divBox) => {
+                divBox.addEventListener('mouseover', () => {
+                    divBox.style.backgroundColor = "black";
+                })
+            });
+        }
+    })
+    colorCheckbox.addEventListener("change", () => {
+        if (colorCheckbox.checked) {
+            divBox.forEach((divBox) => {
+                divBox.addEventListener('mouseover', () => {
+                    divBox.style.backgroundColor = "red"
+                })
+
+            })
+        }
+    })
+
 }
 
 function promptForBlocks() {

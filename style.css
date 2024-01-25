@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-    text-align:center;
+    text-align: center;
 }
 
 #gridContainer {
@@ -23,15 +23,18 @@ body {
 }
 
 .gridBox {
-    display: inline-block;
     margin: 0px;
     padding: 0px;
     background-color: white;
     border: 1px solid grey;
-    width:100px;
+    width: 100px;
+}
 
+button {
+    margin-top: 20px;
+    padding: 6px;
 }
 
 #resetGrid {
-   margin: 10px auto 20px auto;
+    margin-bottom: 20px;
 }
