@@ -1,5 +1,6 @@
 const gridContainer = document.getElementById("gridContainer");
-//gridBox.style.backgroundColor = "black";
+const blackCheckbox = document.getElementById("black");
+const colorCheckbox = document.getElementById("randomColor")
 
 function addBoxes(numOfBlocks) {
     const newWidth = 600 / numOfBlocks;
@@ -13,8 +14,7 @@ function addBoxes(numOfBlocks) {
     console.log("Each box is " + newWidth + "px x " + newWidth + "px");
 
     const divBox = document.querySelectorAll(".gridBox")
-    const blackCheckbox = document.getElementById("black");
-    const colorCheckbox = document.getElementById("randomColor")
+
     blackCheckbox.addEventListener("change", () => {
         if (blackCheckbox.checked) {
             divBox.forEach((divBox) => {
@@ -41,6 +41,7 @@ function promptForBlocks() {
     alert("Enter number of blocks per side");
     const userInput = prompt()
     return parseInt(userInput);
+
 }
 
 const resetGrid = document.getElementById("resetGrid");
@@ -48,8 +49,9 @@ resetGrid.addEventListener('click', () => {
     const numOfBlocks = promptForBlocks();
     gridContainer.innerHTML = ""; // Clear the existing grid
     addBoxes(numOfBlocks);
+    colorCheckbox.checked = false;
+    blackCheckbox.checked = false;
 })
 
 const numOfBlocks = promptForBlocks();
 addBoxes(numOfBlocks);
-
