@@ -28,13 +28,25 @@ function addBoxes(numOfBlocks) {
         if (colorCheckbox.checked) {
             divBox.forEach((divBox) => {
                 divBox.addEventListener('mouseover', () => {
-                    divBox.style.backgroundColor = "red"
+                    divBox.style.backgroundColor = getRandomColor()
                 })
 
             })
         }
     })
 
+}
+
+function getRandomColor() {
+    // Generate random values for red, green, and blue
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    // Create the color string in the format "rgb(red, green, blue)"
+    const color = `rgb(${red}, ${green}, ${blue})`;
+
+    return color;
 }
 
 function promptForBlocks() {
